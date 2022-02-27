@@ -8,3 +8,8 @@ const searchBar = document.querySelector("section");
 imgToggle.addEventListener("click", function () {
   searchBar.classList.toggle("fade");
 });
+const courseBtn = document.querySelector(".cor-btn input");
+const courseNav = document.querySelector(".cor-responsive");
+courseBtn.addEventListener("click", function () {
+  courseNav.classList.toggle("down-fade");
+});
