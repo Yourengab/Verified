@@ -230,7 +230,7 @@ section.fade {
   color: #57d26b;
   font-weight: 700;
 }
-.courses h2 {
+.courses .cor-header {
   font-size: 28px;
   padding-bottom: 30px;
   text-align: center;
@@ -254,7 +254,7 @@ section.fade {
 .cor-link ul li a:hover::after {
   content: "";
   display: block;
-  border-bottom: 3px solid black;
+  border-bottom: 2px solid black;
 }
 .cor-link ul li a:hover {
   opacity: 1;
@@ -285,7 +285,22 @@ section.fade {
 .cor-responsive {
   display: none;
 }
-/* Responsive */
+.course-content {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 50px;
+  flex-wrap: wrap;
+}
+.course-content .text {
+  width: 418px;
+}
+.course-content .course-main {
+  padding-bottom: 50px;
+}
+.course-content .text p {
+  color: #4f4f4f;
+}
+/*  ---------------------------- Responsive ----------------------------------------- */
 @media screen and (max-width: 1500px) {
   nav ul {
     width: 50%;
@@ -348,27 +363,17 @@ section.fade {
   .header h1 {
     font-size: 64px;
   }
-  .cor-link ul li a {
-    font-size: 14px;
-  }
-  .cor-link ul {
+
+  .cor-link .lg-link {
     display: none;
-    list-style: none;
-    justify-content: center;
+    z-index: -1;
   }
-  .cor-link ul li {
-    padding-left: 15px;
-  }
-  .cor-link ul li a {
-    text-decoration: none;
-    color: #4f4f4f;
-    opacity: 60%;
-    font-size: 20px;
+  .cor-link ul li a:hover::after {
+    content: "";
+    display: block;
+    border-bottom: 0px solid black;
   }
 
-  .cor-link ul li a:hover {
-    opacity: 1;
-  }
   .cor-btn {
     width: 150px;
     height: 50px;
@@ -397,37 +402,37 @@ section.fade {
     margin-top: 20px;
     display: inherit;
     width: 100vw;
-    height: 60vh;
+    height: 400px;
     background-color: #57d26b;
-    transform: scale(0.9) translateY(-100%);
+    transform: scale(0.9) translateX(-100%);
     opacity: 0;
     transition: 300ms cubic-bezier(0.64, 0.12, 0.41, 0.96);
-    z-index: -1;
+    position: absolute;
   }
   .cor-responsive ul {
     display: inherit;
     display: flex;
     flex-direction: column;
+    z-index: -1;
   }
   .cor-responsive ul li {
     text-align: center;
     padding-bottom: 10px;
-    padding-top: 55px;
+    padding-top: 50px;
   }
   .cor-responsive ul li a {
     color: rgb(255, 255, 255);
     opacity: 1;
     margin-left: -15px;
   }
-  .cor-link ul li a:hover::after {
-    content: "";
-    display: block;
-    border-bottom: 0px solid black;
-  }
+
   .cor-responsive.down-fade {
-    transform: scale(0.9) translateY(0);
+    transform: scale(0.9) translateX(0);
     opacity: 1;
     z-index: 1;
+  }
+  .course-content .text p {
+    font-size: 16px;
   }
 }
 
@@ -447,5 +452,14 @@ section.fade {
   }
   .about .overlay p {
     font-size: 14px;
+  }
+  .course-content img {
+    width: 318px;
+  }
+  .course-content .text {
+    width: 318px;
+  }
+  .course-content {
+    justify-content: center;
   }
 }
