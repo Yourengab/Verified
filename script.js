@@ -13,3 +13,12 @@ const courseNav = document.querySelector(".cor-responsive");
 courseBtn.addEventListener("click", function () {
   courseNav.classList.toggle("down-fade");
 });
+
+const container = document.querySelector(".event-content");
+const main = document.querySelector(".main-banner");
+container.addEventListener("click", function (e) {
+  const side = document.querySelectorAll(".side-banner");
+  if (e.target.className == "side-banner") {
+    main.src = e.target.src;
+  }
+});
