@@ -1,12 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap");
 
-body {
-  height: 2000px;
-}
 * {
   font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 nav {
   display: flex;
@@ -363,7 +361,105 @@ section.fade {
   max-width: 318px;
   padding-left: 20px;
 }
+.gallery h2 {
+  color: #57d26b;
+  text-align: center;
+  font-size: 30px;
+  padding: 150px 0 50px 0;
+  font-weight: 300;
+}
+.gallery-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-content: center;
+}
+.gallery-content img {
+  width: 100%;
+  height: 100%;
+}
+.feedback {
+  display: flex;
+}
+.info-section {
+  background-color: #57d26b;
+  width: 100%;
 
+  padding-bottom: 200px;
+}
+.info-section .text-info-feedback {
+  margin-top: 350px;
+  padding-left: 50px;
+  color: #000000;
+}
+.info-section .text-info-feedback h2 {
+  font-size: 48px;
+  padding-bottom: 10px;
+  font-weight: 500;
+  width: 70%;
+}
+.info-section .text-info-feedback p {
+  font-size: 28px;
+  width: 80%;
+  font-weight: 300;
+  padding-bottom: 20px;
+}
+.info-section .text-info-feedback button {
+  width: 250px;
+  height: 70px;
+  background: #4f4f4f;
+  border: none;
+  color: white;
+  font-size: 16px;
+}
+.feedback .form-section form input {
+  width: 505px;
+  height: 65px;
+  background-color: #e9e9e9;
+  border: none;
+  padding: 0 20px;
+}
+.feedback .form-section form textarea {
+  resize: none;
+  width: 505px;
+  height: 250px;
+  background-color: #e9e9e9;
+  border: none;
+  padding: 20px 20px 0 20px;
+}
+.feedback .form-section {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 180px;
+  align-items: center;
+}
+.feedback .form-section h2 {
+  padding-bottom: 80px;
+  font-weight: 500;
+}
+.feedback .form-section h2 .active {
+  color: #57d26b;
+  font-weight: 700;
+}
+.feedback .form-section form {
+  display: flex;
+  flex-direction: column;
+}
+.feedback .form-section form button {
+  width: 180px;
+  height: 60px;
+  border: none;
+  background-color: #57d26b;
+  color: white;
+  font-size: 14px;
+}
+.feedback .form-section .email,
+.feedback .form-section .password,
+.feedback .form-section .msg {
+  margin-bottom: 35px;
+}
 /*  ---------------------------- Responsive ----------------------------------------- */
 @media screen and (max-width: 1500px) {
   nav ul {
@@ -391,6 +487,34 @@ section.fade {
     width: 346px;
     height: 200px;
   }
+  .feedback .form-section form input {
+    width: 405px;
+    height: 65px;
+    background-color: #e9e9e9;
+    border: none;
+    padding: 0 20px;
+  }
+  .feedback .form-section form textarea {
+    width: 405px;
+  }
+  .info-section {
+    background-color: #57d26b;
+    width: 70%;
+
+    padding-bottom: 200px;
+  }
+  .info-section .text-info-feedback h2 {
+    font-size: 32px;
+    width: 90%;
+  }
+  .info-section .text-info-feedback p {
+    font-size: 24px;
+  }
+  .feedback .text-info-feedback button {
+    width: 180px;
+    height: 50px;
+    font-size: 11px;
+  }
 }
 @media screen and (max-width: 900px) {
   nav ul {
@@ -401,6 +525,33 @@ section.fade {
   }
   .search-btn .btn {
     padding-right: 20px;
+  }
+  .feedback {
+    flex-direction: column;
+  }
+  .feedback .info-section {
+    width: 100%;
+    height: 400px;
+  }
+  .info-section .text-info-feedback {
+    margin: 150px 0 0 0;
+    padding: 0 50px;
+  }
+  .info-section .text-info-feedback p,
+  .info-section .text-info-feedback h2 {
+    padding: 0;
+    /* font-size: 2rem; */
+    text-align: center;
+    width: 100%;
+  }
+  .info-section .text-info-feedback button {
+    display: none;
+  }
+  .feedback .form-section form input {
+    width: 80vw;
+  }
+  .feedback .form-section form textarea {
+    width: 80vw;
   }
 }
 @media screen and (max-width: 768px) {
@@ -522,6 +673,16 @@ section.fade {
   .event .event-header {
     margin-bottom: -100px;
   }
+  .gallery h2 {
+    color: #57d26b;
+    text-align: center;
+    font-size: 30px;
+    padding: 0px 0 50px 0;
+    font-weight: 300;
+  }
+  .event {
+    margin-bottom: -100px;
+  }
 }
 @media screen and (max-width: 620px) {
   .event .event-header {
@@ -564,6 +725,9 @@ section.fade {
     font-size: 24px;
     width: 500px;
   }
+  .event {
+    margin-bottom: -250px;
+  }
 }
 @media screen and (max-width: 460px) {
   .search-btn .btn {
@@ -596,5 +760,22 @@ section.fade {
   }
   .event .event-header {
     margin-bottom: -400px;
+  }
+  .event {
+    margin-bottom: -350px;
+  }
+  .info-section .text-info-feedback {
+    margin: 150px 0 0 0;
+    padding: 0 20px;
+  }
+  /* .feedback .form-section form input {
+    width: 305px;
+  }
+  .feedback .form-section form textarea {
+    width: 305px; */
+  }
+  .feedback .form-section form button {
+    width: 150px;
+    height: 50px;
   }
 }
